@@ -1,0 +1,139 @@
+drwxr-xr-x    2 ftp      ftp           335 Dec 05  2016 IPI
+-rwxr-xr-x    1 ftp      ftp         65632 Jul 26  2018 PRIVACY-NOTICE.pdf
+-rwxr-xr-x    1 ftp      ftp          6666 Sep 03 12:25 README
+-rw-rw-r--    1 ftp      ftp             4 Sep 03 11:34 VERSION
+drwxr-xr-x    5 ftp      ftp            71 Dec 05  2016 assembly
+drwxr-xr-x    9 ftp      ftp           251 Dec 05  2016 assembly_mapping
+lrwxrwxrwx    1 ftp      ftp            13 Sep 03 09:57 current -> ./release-115
+lrwxrwxrwx    1 ftp      ftp            20 Sep 03 09:56 current_README -> ./release-115/README
+lrwxrwxrwx    1 ftp      ftp            28 Sep 03 09:46 current_assembly_chain -> ./release-115/assembly_chain
+lrwxrwxrwx    1 ftp      ftp            20 Sep 03 09:46 current_bamcov -> ./release-115/bamcov
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:46 current_bed -> ./release-115/bed
+lrwxrwxrwx    1 ftp      ftp            21 Sep 03 09:46 current_compara -> ./release-115/compara
+lrwxrwxrwx    1 ftp      ftp            24 Sep 03 09:47 current_data_files -> ./release-115/data_files
+lrwxrwxrwx    1 ftp      ftp            23 Sep 03 09:47 current_dump_hash -> ./release-115/dump_hash
+lrwxrwxrwx    1 ftp      ftp            18 Sep 03 09:47 current_embl -> ./release-115/embl
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:47 current_emf -> ./release-115/emf
+lrwxrwxrwx    1 ftp      ftp            19 Sep 03 09:47 current_fasta -> ./release-115/fasta
+lrwxrwxrwx    1 ftp      ftp            21 Sep 03 09:47 current_genbank -> ./release-115/genbank
+lrwxrwxrwx    1 ftp      ftp            18 Sep 03 09:47 current_gff3 -> ./release-115/gff3
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:47 current_gtf -> ./release-115/gtf
+lrwxrwxrwx    1 ftp      ftp            18 Sep 03 09:47 current_json -> ./release-115/json
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:56 current_maf -> ./release-115/maf
+lrwxrwxrwx    1 ftp      ftp            19 Sep 03 09:56 current_mysql -> ./release-115/mysql
+lrwxrwxrwx    1 ftp      ftp            24 Sep 03 09:56 current_ncbi_blast -> ./release-115/ncbi_blast
+lrwxrwxrwx    1 ftp      ftp            24 Sep 03 09:56 current_regulation -> ./release-115/regulation
+lrwxrwxrwx    1 ftp      ftp            23 Sep 03 09:56 current_solr_srch -> ./release-115/solr_srch
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:56 current_tsv -> ./release-115/tsv
+lrwxrwxrwx    1 ftp      ftp            23 Sep 03 09:57 current_variation -> ./release-115/variation
+lrwxrwxrwx    1 ftp      ftp            29 Sep 03 09:57 current_virtual_machine -> ./release-115/virtual_machine
+lrwxrwxrwx    1 ftp      ftp            17 Sep 03 09:57 current_xml -> ./release-115/xml
+drwxr-xr-x  305 ftp      ftp         11265 Dec 20 01:07 data_files
+-rw-rw-r--    1 ftp      ftp      62587527 Sep 15 12:50 ensembl-api.tar.gz
+drwxr-xr-x    3 ftp      ftp            28 Dec 05  2016 functional_genomics
+drwxrwxr-x    2 ftp      ftp            80 Jun 21  2017 gff3_so_terms_update
+drwxr-xr-x   44 ftp      ftp          1241 Sep 03 11:30 grch37
+drwxr-xr-x    9 ftp      ftp           239 Jun 09  2023 misc
+drwxr-xr-x    5 ftp      ftp           542 Dec 05  2016 misc-scripts
+drwxr-xr-x    3 ftp      ftp            28 Oct 23  2018 papers
+drwxr-xr-x    9 ftp      ftp           151 Dec 05  2016 pre
+drwxrwxr-x    6 ftp      ftp           176 Sep 04  2024 rapid-release
+drwxr-xr-x   24 ftp      ftp          1044 Apr 28  2020 release-100
+drwxrwxr-x   24 ftp      ftp           995 Aug 19  2020 release-101
+drwxrwxr-x   24 ftp      ftp           995 Oct 26  2020 release-102
+drwxrwxr-x   21 ftp      ftp           922 Feb 16  2021 release-103
+drwxrwxr-x   23 ftp      ftp           974 Mar 30  2021 release-104
+drwxr-sr-x   24 ftp      ftp          1003 Feb 11  2022 release-105
+drwxrwxr-x   24 ftp      ftp           997 Aug 30  2022 release-106
+drwxrwxr-x   23 ftp      ftp           974 Oct 24  2022 release-107
+drwxrwxr-x   23 ftp      ftp           974 Oct 10  2022 release-108
+drwxr-xr-x   23 ftp      ftp          1001 Mar 02  2023 release-109
+drwxr-xr-x   23 ftp      ftp           974 Jan 25  2024 release-110
+drwxrwxr-x   20 ftp      ftp           924 Jun 11  2024 release-111
+drwxr-xr-x   23 ftp      ftp          1192 Oct 17  2024 release-112
+drwxr-xr-x   22 ftp      ftp          1014 May 07  2025 release-113
+drwxr-xr-x   23 ftp      ftp          1067 Sep 25 08:56 release-114
+drwxr-xr-x   21 ftp      ftp          1021 Nov 20 10:00 release-115
+drwxr-xr-x    3 ftp      ftp            29 Dec 05  2016 release-19
+drwxr-xr-x   12 ftp      ftp           303 Dec 05  2016 release-21
+drwxr-xr-x   15 ftp      ftp           396 Dec 05  2016 release-22
+drwxr-xr-x   15 ftp      ftp           397 Dec 05  2016 release-23
+drwxr-xr-x   17 ftp      ftp           458 Dec 05  2016 release-24
+drwxr-xr-x   17 ftp      ftp           459 Dec 05  2016 release-25
+drwxr-xr-x   17 ftp      ftp           460 Dec 05  2016 release-26
+drwxr-xr-x   18 ftp      ftp           485 Feb 11  2022 release-27
+drwxr-xr-x   18 ftp      ftp           489 Dec 05  2016 release-28
+drwxr-xr-x   19 ftp      ftp           519 Dec 05  2016 release-29
+drwxr-xr-x   19 ftp      ftp           519 Dec 05  2016 release-30
+drwxr-xr-x   20 ftp      ftp           552 Dec 05  2016 release-31
+drwxr-xr-x   21 ftp      ftp           577 Dec 05  2016 release-32
+drwxr-xr-x   21 ftp      ftp           580 Dec 05  2016 release-33
+drwxr-xr-x   21 ftp      ftp           581 Dec 05  2016 release-34
+drwxr-xr-x   22 ftp      ftp           793 Dec 05  2016 release-35
+drwxr-xr-x   23 ftp      ftp           829 Dec 05  2016 release-36
+drwxr-xr-x   23 ftp      ftp           855 Dec 05  2016 release-37
+drwxr-xr-x   23 ftp      ftp           830 Dec 05  2016 release-38
+drwxr-xr-x   23 ftp      ftp           833 Dec 05  2016 release-39
+drwxr-xr-x   29 ftp      ftp          1085 Dec 05  2016 release-40
+drwxr-xr-x   30 ftp      ftp          1130 Dec 05  2016 release-41
+drwxr-xr-x   31 ftp      ftp          1177 Dec 05  2016 release-42
+drwxr-xr-x   35 ftp      ftp          1334 Dec 05  2016 release-43
+drwxr-xr-x   38 ftp      ftp          1467 Dec 05  2016 release-44
+drwxr-xr-x   39 ftp      ftp          1509 Dec 05  2016 release-45
+drwxr-xr-x   40 ftp      ftp          1536 Dec 05  2016 release-46
+drwxr-xr-x    9 ftp      ftp           157 Dec 05  2016 release-47
+drwxr-xr-x    8 ftp      ftp           135 Dec 05  2016 release-48
+drwxr-xr-x    8 ftp      ftp           159 Dec 05  2016 release-49
+drwxr-xr-x    9 ftp      ftp           196 Dec 05  2016 release-50
+drwxr-xr-x    9 ftp      ftp           196 Dec 05  2016 release-51
+drwxr-xr-x    9 ftp      ftp           196 Dec 05  2016 release-52
+drwxr-xr-x    9 ftp      ftp           196 Dec 05  2016 release-53
+drwxr-xr-x   10 ftp      ftp           217 Dec 05  2016 release-54
+drwxr-xr-x   10 ftp      ftp           217 Dec 05  2016 release-55
+drwxr-xr-x   11 ftp      ftp           238 Dec 05  2016 release-56
+drwxr-xr-x   10 ftp      ftp           217 Dec 05  2016 release-57
+drwxr-xr-x   10 ftp      ftp           217 Dec 05  2016 release-58
+drwxr-xr-x   10 ftp      ftp           217 Dec 05  2016 release-59
+drwxr-xr-x   12 ftp      ftp           293 Aug 09  2024 release-60
+drwxr-xr-x   12 ftp      ftp           268 Feb 17  2025 release-61
+drwxr-xr-x   12 ftp      ftp           272 Dec 05  2016 release-62
+drwxr-xr-x   12 ftp      ftp           284 Dec 05  2016 release-63
+drwxr-xr-x   13 ftp      ftp           284 Dec 05  2016 release-64
+drwxr-xr-x   13 ftp      ftp           284 Dec 05  2016 release-65
+drwxr-xr-x   14 ftp      ftp           305 Dec 05  2016 release-66
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-67
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-68
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-69
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-70
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-71
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-72
+drwxr-xr-x   15 ftp      ftp           338 Dec 05  2016 release-73
+drwxr-xr-x   16 ftp      ftp           367 Dec 05  2016 release-74
+drwxr-xr-x   16 ftp      ftp           367 Dec 05  2016 release-75
+drwxr-xr-x   17 ftp      ftp           388 Dec 05  2016 release-76
+drwxr-xr-x   17 ftp      ftp           388 Dec 05  2016 release-77
+drwxr-xr-x   17 ftp      ftp           388 Dec 05  2016 release-78
+drwxr-xr-x   17 ftp      ftp           391 Dec 05  2016 release-79
+drwxr-xr-x   17 ftp      ftp           391 Dec 05  2016 release-80
+drwxr-xr-x   18 ftp      ftp           413 Dec 05  2016 release-81
+drwxr-xr-x   18 ftp      ftp           413 Dec 05  2016 release-82
+drwxr-xr-x   19 ftp      ftp           434 Dec 05  2016 release-83
+drwxr-xr-x   20 ftp      ftp           459 Dec 05  2016 release-84
+drwxr-xr-x   23 ftp      ftp           534 Dec 05  2016 release-85
+drwxr-xr-x   22 ftp      ftp           512 Dec 05  2016 release-86
+drwxr-xr-x   22 ftp      ftp           512 Mar 28  2017 release-87
+drwxr-sr-x   22 ftp      ftp           558 Jun 01  2017 release-88
+drwxr-xr-x   24 ftp      ftp           560 Jun 01  2017 release-89
+drwxr-xr-x   24 ftp      ftp           560 Sep 11  2017 release-90
+drwxr-xr-x   24 ftp      ftp           560 Dec 11  2017 release-91
+drwxr-xr-x   25 ftp      ftp           582 Jul 02  2018 release-92
+drwxr-xr-x   26 ftp      ftp           615 Sep 28  2018 release-93
+drwxr-xr-x   25 ftp      ftp           582 Oct 18  2018 release-94
+drwxr-xr-x   24 ftp      ftp           555 Jan 09  2019 release-95
+drwxr-xr-x   25 ftp      ftp          1017 Apr 10  2019 release-96
+drwxr-xr-x   25 ftp      ftp          1036 Jun 12  2019 release-97
+drwxr-xr-x   24 ftp      ftp          1009 Dec 03  2019 release-98
+drwxr-sr-x   23 ftp      ftp          1016 Jan 16  2020 release-99
+drwxr-xr-x    9 ftp      ftp           180 Dec 05  2016 repository
+drwxr-xr-x    2 ftp      ftp            28 Dec 05  2016 traces
+drwxr-xr-x   13 ftp      ftp           273 Feb 26  2018 vega
