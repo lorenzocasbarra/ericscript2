@@ -45,14 +45,9 @@ for ( i in 1: length(ensrefid.tmp)) {
 ensversion0 <- ensversion
 if (ensversion == 0) {
   xx.tmp <- readLines(file.path(ericscriptfolder, "lib", "data", "_resources", ".ftplist0"))
-  xx.tmp1 <- xx.tmp[grep("[0-9] release-", xx.tmp, perl = T)]
-  xx.tmp2 <- strsplit(xx.tmp1, " release-")
-  xx.tmp3 <- rep(NA, length(xx.tmp2))
-  for (i in 1: length(xx.tmp2)) {
-    xx.tmp3[i] <- as.numeric(unlist(strsplit(xx.tmp2[[i]][2], " "))[1])
-  }
-  ensversion <- max(xx.tmp3)
+  ensversion<-stringr::str_match(xx.tmp[grep("current -> ./release-",xx.tmp,perl=T)],"release-(.+?)$")[2]
 }
+
 if (flagprint != 0) {
 if (ensversion0 != 0) {
 cat("Selected Ensembl version:", ensversion, "\n")
