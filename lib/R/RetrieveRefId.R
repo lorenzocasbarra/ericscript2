@@ -34,7 +34,7 @@ ensrefid.tmp <- xx[1: mybreaks[1]]
 ensrefid <- c()
 ensrefid.path <- c()
 for ( i in 1: length(ensrefid.tmp)) {
-  #  ix.start <- which(xx == paste("./", ensrefid.tmp[i], "/dna:", sep ="")) + 1
+  ix.start <- which(xx == paste("./", ensrefid.tmp[i], "/dna:", sep ="")) + 1
   ix.start <- which(xx == paste(ensrefid.tmp[i], "/dna:", sep ="")) + 1
   if (length(ix.start) != 0) {
     ix.end <- grep("./", xx[ix.start: length(xx)])[1] + ix.start - 1
