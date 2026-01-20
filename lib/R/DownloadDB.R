@@ -64,7 +64,7 @@ if (myrefid == "homo_sapiens") {
 } 
 #### start attributes
 cat("<Attribute name = \"ensembl_gene_id\" />", file = fileout, sep = "\n", append = T)
-if (ensversion > 0 & ensversion <= 75) {
+if (as.numeric(ensversion) > 0 & as.numeric(ensversion) <= 75) {
   cat("<Attribute name = \"external_gene_id\" />", file = fileout, sep = "\n", append = T)  
 } else {
   cat("<Attribute name = \"external_gene_name\" />", file = fileout, sep = "\n", append = T)
