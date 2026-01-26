@@ -5,6 +5,7 @@ dbfolder=$3
 ensversion=$4
 myrandomn=$RANDOM
 tmpfolder=$dbfolder/".tmp_"$myrandomn
+#tmpfolder=$dbfolder/".tmp_8494"
 mkdir $tmpfolder
 printf "[EricScript] Downloading $refid data. This process may take from few minutes to few hours depending on the selected genome ..."
 R --slave --args $ericscriptfolder,$refid,$tmpfolder,$ensversion < $ericscriptfolder/lib/R/DownloadDB.R
