@@ -57,53 +57,7 @@ GetOptions(
 $help and pod2usage (-verbose=>1, -exitval=>1, -output=>\*STDOUT);
 $man and pod2usage (-verbose=>2, -exitval=>1, -output=>\*STDOUT);
 
-my $sysmsg;
-my $sysflag=0;
-$sysmsg = qx/samtools 2>&1/ || '';		
-if ($sysmsg !~ m/bamshuf/) {
-	print STDERR "[EricScript] Error: SAMtools >= 0.1.19 not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-}
-if ($sysmsg =~ m/htslib/) {
-	print STDERR "[EricScript] Error: SAMtools >= 1.0 detected! EricScript is not yet compatible with it. Please use samtools 0.1.19 to run EricScript.\n";
-	$sysflag=1;
-}
-$sysmsg = qx/bwa 2>&1/ || '';		
-if ($sysmsg !~ m/sampe/) {
-	print STDERR "[EricScript] Error: BWA not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-} else {
-	$sysmsg = qx/bwa mem 2>&1/ || '';
-	if ($sysmsg !~ m/-Y/) {
-		print STDERR "[EricScript] Error: BWA >= 0.7.12 not found! Please install and add it to your PATH.\n";
-		$sysflag=1;
-	}
-}
-#} elsif ($sysmsg !~ m/mem/) {
-#    print STDERR "[EricScript] Error: BWA >= 0.7.4 not found! Please install and add it to your PATH.\n";
-#    $sysflag=1;
-#}
-$sysmsg = qx/blat 2>&1/ || '';		
-if ($sysmsg !~ "tileSize") {
-	print STDERR "[EricScript] Error: BLAT not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-}
-$sysmsg = qx/R --help 2>&1/ || '';		
-if ($sysmsg !~ "Rdiff") {
-	print STDERR "[EricScript] Error: R not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-}
-$sysmsg = qx/seqtk 2>&1/ || '';
-if ($sysmsg !~ "subseq") {
-	print STDERR "[EricScript] Error: Seqtk not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-}
-$sysmsg = qx/bedtools 2>&1/ || '';
-if ($sysmsg !~ "sample") {
-	print STDERR "[EricScript] Error: bedtools (>=2.18) not found! Please install and add it to your PATH.\n";
-	$sysflag=1;
-}
-
+my $sysflag = test_dependencies();
 if ($sysflag == 1) {
 	exit(100);
 }
@@ -389,6 +343,56 @@ if ($checkdb == 0 && $demo == 0 && $simulator == 0 && $calcstats == 0 && $downdb
 	system($calcstatscommand);
 
 }
+sub test_dependencies {
+	my $sysmsg;
+	my $sysflag=0;
+	$sysmsg = qx/samtools 2>&1/ || '';		
+	if ($sysmsg !~ m/bamshuf/) {
+		print STDERR "[EricScript] Error: SAMtools >= 0.1.19 not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	}
+	if ($sysmsg =~ m/htslib/) {
+		print STDERR "[EricScript] Error: SAMtools >= 1.0 detected! EricScript is not yet compatible with it. Please use samtools 0.1.19 to run EricScript.\n";
+		$sysflag=1;
+	}
+	$sysmsg = qx/bwa 2>&1/ || '';		
+	if ($sysmsg !~ m/sampe/) {
+		print STDERR "[EricScript] Error: BWA not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	} else {
+		$sysmsg = qx/bwa mem 2>&1/ || '';
+		if ($sysmsg !~ m/-Y/) {
+			print STDERR "[EricScript] Error: BWA >= 0.7.12 not found! Please install and add it to your PATH.\n";
+			$sysflag=1;
+		}
+	}
+	#} elsif ($sysmsg !~ m/mem/) {
+	#    print STDERR "[EricScript] Error: BWA >= 0.7.4 not found! Please install and add it to your PATH.\n";
+	#    $sysflag=1;
+	#}
+	$sysmsg = qx/blat 2>&1/ || '';		
+	if ($sysmsg !~ "tileSize") {
+		print STDERR "[EricScript] Error: BLAT not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	}
+	$sysmsg = qx/R --help 2>&1/ || '';		
+	if ($sysmsg !~ "Rdiff") {
+		print STDERR "[EricScript] Error: R not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	}
+	$sysmsg = qx/seqtk 2>&1/ || '';
+	if ($sysmsg !~ "subseq") {
+		print STDERR "[EricScript] Error: Seqtk not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	}
+	$sysmsg = qx/bedtools 2>&1/ || '';
+	if ($sysmsg !~ "sample") {
+		print STDERR "[EricScript] Error: bedtools (>=2.18) not found! Please install and add it to your PATH.\n";
+		$sysflag=1;
+	}
+	return($sysflag);
+}
+sub update_db {
 
 
 =head1 SYNOPSIS
