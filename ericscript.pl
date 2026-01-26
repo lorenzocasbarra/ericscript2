@@ -201,7 +201,10 @@ if ($checkdb == 0 && $demo == 0 && $simulator == 0 && $calcstats == 0 && $downdb
 	if (-d $dbfolder) {
 		print STDERR "[EricScript] Checking installed Database.\n";
 		system("R --slave --args $ericscriptfolder,$printdb,$dbfolder,$ensversion < $ericscriptfolder/lib/R/RetrieveRefId.R");
-		system("R --slave --args $ericscriptfolder,$dbfolder < $ericscriptfolder/lib/R/UpdateDB.R");
+		update_db(
+			eric_folder => $ericscriptfolder,
+			db_folder => $dbfolder
+		);
 		exit(100);
 	} else {
 		die "[EricScript] Error: the directory $dbfolder does not exist.\n";
@@ -393,6 +396,34 @@ sub test_dependencies {
 	return($sysflag);
 }
 sub update_db {
+	my %args = (
+		eric_folder => ".",
+		db_folder => "lib"
+	);
+	my $ericscriptfolder = $args{eric_folder};
+	my $dbfolder = $args{db_folder};
+
+	opendir(DIR,"$dbfolder/data");
+	my @dblist = grep {!/^\./} readdir(DIR);
+	closedir(DIR);
+	if (scalar(@dblist) >= 1 ) {
+		open(IN,"$ericscriptfolder/lib/data/_resources/.flag.updatedb") or die "[EricScript] Error: Cannot open $ericscriptfolder/lib/data/_resources/.flag.updatedb";
+		my $flag = <IN>;
+		chomp($flag);
+		close(IN);
+		if (!$flag) {
+			print STDERR "[EricScript] Nothing to update. Exit.\n";
+		} else {
+			my $dbs = join(" ",@dblist);
+			print STDERR "[EricScript] Found a new release of Ensembl Gene. Updating database for $dbs\n";
+			foreach (@dblist) {
+				system("sh $ericscriptfolder/lib/bash/Builseq.sh $ericscriptfolder $_");
+			}
+		}
+	} else {
+		"[EricScript] No database was found in $dbfolder/data/ - Please run ericscript.pl --downdb to download your databases.\n"
+	}
+}
 
 
 =head1 SYNOPSIS
