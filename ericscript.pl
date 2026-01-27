@@ -398,7 +398,8 @@ sub test_dependencies {
 sub update_db {
 	my %args = (
 		eric_folder => ".",
-		db_folder => "lib"
+		db_folder => "lib",
+		@_
 	);
 	my $ericscriptfolder = $args{eric_folder};
 	my $dbfolder = $args{db_folder};
